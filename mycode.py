@@ -10,6 +10,9 @@ data = {
 }
 
 df = pd.DataFrame(data)
+new_row_loc = {'Name': 'Alice', 'Age': 34, 'City': 'Mumbai'}
+
+df = pd.concat([df, pd.DataFrame([new_row_loc])], ignore_index=True)
 
 base_dir = Path('data')
 base_dir.mkdir(parents=True, exist_ok=True)
